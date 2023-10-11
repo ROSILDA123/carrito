@@ -36,7 +36,7 @@
                                     <div class="p-5">
                                         <div class="text-center mb-5">
                                             <a href="index.html" class="text-dark font-size-22 font-family-secondary">
-                                                 <h1>ZAPATERIA ROUS</h1>
+                                                 <h1><b>ZAPATERIA ROUS</p></h1>
                                             </a>
                                         </div>
                                         <h1 class="h5 mb-1">Bienvenido</h1>
