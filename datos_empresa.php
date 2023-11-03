@@ -10,6 +10,8 @@
 </head>
 <body>
     <?php include('include/menu.php') ?>;
+    
+
 
     <!-- INICIO DE CONTENIDO -->
 

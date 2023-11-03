@@ -21,10 +21,10 @@
                     <h4>REGISTRAR CLIENTES</h4>
                         <div class="card">
                             <div class="card-body">
-                                <form action="operaciones/registrar_usuario.php" method="POST">
+                                <form action="operaciones/registrar_cliente.php" method="POST">
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-md-2 col-sm-12" >RUC_DNI: </label>
-                                    <input type="number" name="ruc_ni" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <input type="number" name="ruc_dni" class="form-control col-lg-4 col-md-4 col-sm-12" required>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-md-2 col-sm-12" >RAZON_SOCIAL: </label>

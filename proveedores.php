@@ -21,7 +21,7 @@
                     <h4>REGISTRAR PROVEEDORES</h4>
                         <div class="card">
                             <div class="card-body">
-                                <form action="operaciones/registrar_usuario.php" method="POST">
+                                <form action="operaciones/registrar_proveedo.php" method="POST">
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-md-2 col-sm-12" >RUC: </label>
                                     <input type="number" name="ruc" class="form-control col-lg-4 col-md-4 col-sm-12" required>
@@ -41,6 +41,10 @@
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-md-2 col-sm-12">DIRECCION: </label>
                                     <input type="text" name="direccion" class="form-control col-lg-8 col-md-10 col-sm-12" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-md-2 col-sm-12">METODO PAGO: </label>
+                                    <input type="text" name="metodo_pago" class="form-control col-lg-8 col-md-10 col-sm-12" required>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-md-3 col-sm-12"> </label>

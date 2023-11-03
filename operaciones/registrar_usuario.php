@@ -8,10 +8,16 @@ $correo= $_POST['correo'];
 $telefono= $_POST['telefono'];
 $direccion= $_POST['direccion'];
 $fecha_nac= $_POST['fecha_nacimiento'];
+$id_rol= $_POST['rol'];
 
+$nombre_archivo =$dni.".jpg";
+$ruta_foto = "../img_usuarios/".$nombre_archivo;
 
-$consulta = "INSERT INTO usuario (dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password, activo, 
-reset_password, tokan_password) VALUES('$dni','$ap_nom','$correo','$telefono','$direccion','$fecha_nac','$dni',1,0,'')";
+$pass_secure = password_hash($dni, PASSWORD_DEFAULT);
+
+if (move_uploaded_file($_FILES['imagen']['tmp_name'], $ruta_foto)) {
+   $consulta = "INSERT INTO usuario (dni, apellidos_nombres, correo, telefono, direccion, fecha_nacimiento, password, id_rol, foto, activo, reset_password, token_password)
+    VALUES('$dni','$ap_nom','$correo','$telefono','$direccion','$fecha_nac','$pass_secure','$id_rol','$nombre_archivo',1,0,' ')";
 
 $ejecutar = mysqli_query($conexion, $consulta);
 
@@ -20,5 +26,12 @@ $ejecutar = mysqli_query($conexion, $consulta);
  }else {
     echo "Error en el Registro";
  }
+}else {
+  "Error al subir la foto";
+}
+
+
+
+
 
 ?>
