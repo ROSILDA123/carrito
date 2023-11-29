@@ -3,8 +3,9 @@ include("../include/conexion.php");
 
 $codigo=$_POST['codigo'];
 $descripcion=$_POST['descripcion'];
-$categoria=$_POST['id_categoria'];
 $detalle=$_POST['detalle'];
+$categoria=$_POST['id_categoria'];
+
 $precioCompra=$_POST['precio_compra'];
 $precioVenta=$_POST['precio_venta'];
 $stock=$_POST['stock'];
@@ -28,9 +29,9 @@ $ejecutar = mysqli_query($conexion, $consulta);
 if($ejecutar){
     echo "Registro exitoso";
 }else{
-    echo "error";
+    echo "error al registrar";
 }
 }else {
-   "error al suir la foto";
+   "error al subir la foto";
 }
 ?>

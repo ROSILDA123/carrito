@@ -23,22 +23,6 @@
                         Cerrar sesion
                     </a>     
                 </div>
-
-                <div class="dropdown d-inline-block ml-2">
-                <button type="button" class="btn header-item waves-effect" 
-                id="page-header-user-dropdown" data-toggle="dropdown" 
-                aria-haspopup="true" aria-expanded="false">
-                   Usuario
-                   <i class="mdi mdi-chevron-down d-none d-sm-inline-block"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                        Mi perfil
-                    </a> 
-                    <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
-                        Cerrar sesion
-                    </a>     
-                </div>
               </div>
             </div>
         </div>
