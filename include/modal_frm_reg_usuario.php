@@ -52,6 +52,18 @@
                                     <label class="col-lg-2 col-md-2 col-sm-12" >FOTO: </label>
                                     <input type="file" name="foto" class="form-control col-lg-4 col-md-4 col-sm-12" required accept="image/*">
                                 </div> 
+                                <div class="form-group row">
+                                <label class="col-lg-2 col-md-2 col-sm-12">Estado</label>
+                               
+                                    <select name="estado" class="form-control col-lg-4 col-md-4 col-sm-12" required>
+                                    <option>Seleccione Estado </option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                       
+  
+                                      
+                                    </select>
+                                 </div>
 
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-md-3 col-sm-12"> </label>

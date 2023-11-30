@@ -37,15 +37,15 @@ include("include/conexion.php");
                                     <thead>
                                         <tr>
                                             <th>Nº REGISTRO</th>
-                                            <th>FOTO</th>
                                             <th>DNI</th>
-                                            <th>APELLIDOS Y NOMBRES</th>
+                                            <th>NOMBRES Y APELLIDOS</th>
                                             <th>CORREO</th>
                                             <th>TELEFONO</th>
                                             <th>DIRECCION</th>
-                                            <th>ESTADO</th>
+                                            <th>FECHA_NACIMIENTO</th>
                                             <th>ROL</th>
-                                            <th>ACCIONES</th>
+                                            <th>FOTO</th>
+                                            <th>ESTADO</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -57,14 +57,15 @@ include("include/conexion.php");
                                             $contador += 1;
                                             echo "<tr>";
                                             echo "<td>".$contador."</td>";
-                                            echo "<td>".$respuesta['foto']."</td>";
                                             echo "<td>".$respuesta['dni']."</td>";
                                             echo "<td>".$respuesta['nombres_apellidos']."</td>";
+                                            echo "<td>".$respuesta['correo']."</td>";
                                             echo "<td>".$respuesta['telefono']."</td>";
                                             echo "<td>".$respuesta['direccion']."</td>";
                                             echo "<td>".$respuesta['fecha_nacimiento']."</td>";
+                                            echo "<td>".$respuesta['id_rol']."</td>";                                           
+                                            echo "<td>".$respuesta['foto']."</td>";
                                             echo "<td>".$respuesta['activo']."</td>";
-                                            echo "<td>".$respuesta['id_rol']."</td>";
                                             echo "<td><button class='btn btn-success'>Editar</button>
                                             <button class='btn btn-danger'>Eliminar</button></td>";
                                             echo "</tr>";
