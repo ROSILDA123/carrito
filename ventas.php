@@ -27,10 +27,8 @@ include("include/conexion.php");
             <div class="container-fluid">    <!-- container= solo una parte de la pantalla container-fluid=todo el espacio extremo a extremo -->
                 <div class="row">     <!-- ayuda en resposive -->
                     <div class="col-12">
-                    <?php 
-                    include("include/modal_frm_reg_ventas.php");
-                    ?>
                     <h4>REGISTRO DE VENTAS</h4>
+                    <a href="venta.php" class="btn btn-success" >+ Nuevo</a>
                         <div class="card">
                             <div class="card-body">
                                 <table id="basic-datatable" class="table dt-responsive nowrap">
