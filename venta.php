@@ -23,7 +23,7 @@ include("include/conexion.php");
         }
     </style>
 </head>
-<body>
+<body style="background-color: #ADD8E6">
     <?php include('include/menu.php') ?>;
 
     <!-- INICIO DE CONTENIDO -->
@@ -34,7 +34,7 @@ include("include/conexion.php");
                 <div class="row">     <!-- ayuda en resposive -->
                     <div class="col-12">
                     <h4>REGISTRAR NUEVA VENTA</h4>
-                        <div class="card">
+                        <div class="card" >
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-4 col-md-4 col-sm-12">
@@ -75,18 +75,18 @@ include("include/conexion.php");
                                         <table class="table table-bordered mb-0">
                                             <thead>
                                                 <tr>
-                                                    <th colspan="6" class="text-center" style="background-color: #5F9EA0; color:black">PRODUCTOS</th>
+                                                    <th colspan="6" class="text-center" style="background-color: #22B5E2; color:black"><h4>PRODUCTOS</h4></th>
                                                 </tr>
                                                 <tr>
-                                                    <th width="5%" style="background-color: #ADD8E6; color:black">Nro</th>
-                                                    <th width="60%" style="background-color: #ADD8E6; color:black">Descripcion</th>
-                                                    <th width="10%" style="background-color: #ADD8E6; color:black">Cant.</th>
-                                                    <th width="10%" style="background-color: #ADD8E6; color:black">P.unit</th>
-                                                    <th width="10%" style="background-color: #ADD8E6; color:black">Importe</th>
-                                                    <th width="5%"  style="background-color: #ADD8E6; color:black"></th>
+                                                    <th width="5%">Nro</th>
+                                                    <th width="60%">Descripcion</th>
+                                                    <th width="10%">Cant.</th>
+                                                    <th width="10%">P.unit</th>
+                                                    <th width="10%">Importe</th>
+                                                    <th width="5%" ></th>
                                                 </tr>
                                             </thead>
-                                            <tbody>
+                                            <tbody >
                                                 <tr>
                                                     <td>1</td>
                                                     <td>nombre producto</td>
