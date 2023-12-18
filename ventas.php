@@ -1,18 +1,15 @@
-<?php
-include('include/conexion.php');
-?>
+<?php include("include/conexion.php");?>
 
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ventas</title>
-    <link rel="stylesheet" href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" type="text/css">
+    <title>VetMay</title>
+
+    <link href="plantilla/Admin/vertical/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/vertical/assets/css/theme.min.css" rel="stylesheet" type="text/css" />
-
     <!-- Plugins css -->
     <link href="plantilla/Admin/plugins/datatables/dataTables.bootstrap4.css" rel="stylesheet" type="text/css" />
     <link href="plantilla/Admin/plugins/datatables/responsive.bootstrap4.css" rel="stylesheet" type="text/css" />
@@ -20,74 +17,76 @@ include('include/conexion.php');
     <link href="plantilla/Admin/plugins/datatables/select.bootstrap4.css" rel="stylesheet" type="text/css" />
 
 </head>
-
-
 <body>
-    <?php
-    // lenguaje en php
-    include("include/menu.php");
-    ?>
-    <!-- INICIO DE CONTENIDO -->
-    <div class="main-content">
-        <div class="page-content">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12">
-                        <h4>Relación de Ventas</h4>
-                        <a href="venta.php" class="btn btn-success">+ Nuevo</a>
-                        <div class="card">
-                            <div class="card-body">
-                                
-                                <table id="basic-datatable" class="table dt-responsive nowrap">
-                                    <thead>
-                                        <tr>
-                                            <th>Nro</th>
-                                            <th>Foto</th>
-                                            <th>DNI</th>
-                                            <th>Apellidos y Nombres</th>
-                                            <th>Correo</th>
-                                            <th>Telefono</th>
-                                            <th>Direccion</th>
-                                            <th>Estado</th>
-                                            <th>Rol</th>
-                                            <th>Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <?php
-                                        $consulta = "SELECT * FROM ventas";
-                                        $ejecutar = mysqli_query($conexion, $consulta);
-                                        $contador = 0;
-                                        while ($respuesta = mysqli_fetch_array($ejecutar)) {
-                                            $contador += 1;
-                                           echo "<tr>";
-                                           echo "<td>".$contador."</td>";
-                                           echo "<td>".$respuesta['foto']."</td>";
-                                           echo "<td>".$respuesta['dni']."</td>";
-                                           echo "<td>".$respuesta['apellidos_nombres']."</td>";
-                                           echo "<td>".$respuesta['correo']."</td>";
-                                           echo "<td>".$respuesta['telefono']."</td>";
-                                           echo "<td>".$respuesta['direccion']."</td>";
-                                           echo "<td>".$respuesta['activo']."</td>";
-                                           echo "<td>".$respuesta['id_rol']."</td>";
-                                           echo "<td><button class='btn btn-success'>Editar</button><button class='btn btn-danger'>Eliminar</button></td>";
-                                           echo "</tr>";
-                                        }
-                                        ?>
-                                    </tbody>
-                                </table>
+<?php
+include('include/menu.php');
+?>
+<!--INICIO DE CONTENIDO-->
+<div class="main-content">
+    <div class="page-content">
+        <div class="container-fluid"> <!--conteiner solo se usa el 80% de la pantalla conteiner-fluid ocupa todo-->
+            <div class="row"><!--row ayuda a ser responsive pero en bootstrap-->
+                <div class="col-12">
 
-                            </div>
-                        </div>
+                    <?php include("include/modal_frm_reg_productos.php"); ?>
+                    <h4>LISTA DE PRODUCTOS</h4>
+                    <div class="card">
+                        <div class="card-body">
+
+                            <table id="basic-datatable" class="table dt-responsive nowrap">
+                                <thead>
+                                    <tr>
+                                        <th>NRO REGISTRO</th>
+                                        <th>IMAGEN</th>
+                                        <th>CODIGO</th>
+                                        <th>DESCRIPCION</th>
+                                        <th>DETALLE</th>
+                                        <th>ID CATEGORIA</th>
+                                        <th>PRECIO COMPRA</th>
+                                        <th>PRECIO VENTA</th>
+                                        <th>STOCK</th>
+                                        <th>ESTADO</th>
+                                        <th>ID PROVEEDOR</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php 
+                                    $consulta="SELECT * FROM producto";
+                                    $ejecutar= mysqli_query($conexion, $consulta);
+                                    $contador = 0;
+                                    while ($respuesta = mysqli_fetch_array($ejecutar)) {
+                                        $contador +=1; 
+                                        echo "<tr>";
+                                        echo "<td>".$contador."</td>";
+                                        echo "<td>".$respuesta['imagen']."</td>";
+                                        echo "<td>".$respuesta['codigo']."</td>";
+                                        echo "<td>".$respuesta['descripcion']."</td>";
+                                        echo "<td>".$respuesta['detalle']."</td>";
+                                        echo "<td>".$respuesta['id_categoria']."</td>";
+                                        echo "<td>".$respuesta['precio_compra']."</td>";
+                                        echo "<td>".$respuesta['precio_venta']."</td>";
+                                        echo "<td>".$respuesta['stock']."</td>";
+                                        echo "<td>".$respuesta['estado']."</td>";
+                                        echo "<td>".$respuesta['id_proveedor']."</td>";
+                                        echo "<td><button class= 'btn btn-success'>Editar</button> <button class= 'btn btn-danger'>Eliminar</button></td>";
+                                        echo "</tr>";
+
+                                    }
+                                    ?>
+                                </tbody>
+                            </table>
+
+                        </div>  
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<!--FIN DE CONTENIDO-->
 
-    <!-- FIN DE CONTENIDO -->
 
-    <!-- jQuery  -->
     <script src="plantilla/Admin/vertical/assets/js/jquery.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/bootstrap.bundle.min.js"></script>
     <script src="plantilla/Admin/vertical/assets/js/metismenu.min.js"></script>
@@ -112,6 +111,7 @@ include('include/conexion.php');
 
     <!-- Datatables init -->
     <script src="plantilla/Admin/vertical/assets/pages/datatables-demo.js"></script>
+
     <!-- App js -->
     <script src="plantilla/Admin/vertical/assets/js/theme.js"></script>
 </body>
